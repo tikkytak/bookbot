@@ -12,10 +12,14 @@ def character_count(text):
                 characters[char] = 1    
         return characters 
 
-def report(dict):
-    list = []
-    for key in dict:
-        if key.isalpha() == True:
-             list.extend(dict.items())
-             
-    return list
+def sort_on(dict):
+     return dict["num"]
+
+def sort(dict):
+    result = []
+    for char, count in dict.items():
+        char_dict = {"char": char, "num":count}
+        result.append(char_dict)
+
+    result.sort(reverse=True, key=sort_on)    
+    return result

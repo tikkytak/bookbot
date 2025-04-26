@@ -1,6 +1,6 @@
 from stats import word_count
 from stats import character_count
-from stats import report
+from stats import sort
 
 with open('books/frankenstein.txt') as f:
         text = f.read()
@@ -8,6 +8,6 @@ with open('books/frankenstein.txt') as f:
 dict = character_count(text)            
 def main():
         
-        print(f"{report(dict)} words found in the document")       
+        sorted_list = sort(text)       
 
 main()
