@@ -11,4 +11,11 @@ def character_count(text):
             else:
                 characters[char] = 1    
         return characters 
-                
+
+def report(dict):
+    list = []
+    for key in dict:
+        if key.isalpha() == True:
+             list.extend(dict.items())
+             
+    return list

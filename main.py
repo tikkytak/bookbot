@@ -1,15 +1,13 @@
 from stats import word_count
 from stats import character_count
-
+from stats import report
 
 with open('books/frankenstein.txt') as f:
         text = f.read()
             
-            
+dict = character_count(text)            
 def main():
         
-        print(f"{word_count(text)} words found in the document")
-        print(f"{character_count(text)}")
-        
+        print(f"{report(dict)} words found in the document")       
 
 main()
